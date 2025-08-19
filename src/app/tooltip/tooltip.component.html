@@ -26,16 +26,13 @@
     <div class="form-group">
       <label for="size">Font Size</label>
       <select name="size" id="size" [(ngModel)]="size">
-        <option value="16px">16px</option>
-        <option value="17px">17px</option>
-        <option value="18px">18px</option>
-        <option value="19px">19px</option>
+        <option *ngFor="let s of sizes" [value]="s + 'px'">{{ s }}px</option>
       </select>
     </div>
   </form>
 </div>
 
-<span appToolTip>
+<span class="tool-tip-container">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     x="0px"

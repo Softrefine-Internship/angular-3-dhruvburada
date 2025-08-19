@@ -14,4 +14,6 @@ export class TooltipComponent {
   color: string = "white";
   backColor: string = "black";
   size: string = `16px`
+  sizes: number[] = [12, 14, 16, 20, 24, 28, 36];
+
 }

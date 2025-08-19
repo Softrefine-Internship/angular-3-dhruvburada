@@ -14,10 +14,10 @@ export class TooltipDirective {
   constructor(private el: ElementRef, private renderer: Renderer2) {
     this.renderer.addClass(this.el.nativeElement, 'tooltip-parent');
   }
-  private tooltipEl!: HTMLElement;
+  private tooltipEl!: HTMLElement | null;
 
   @HostListener('mouseenter') onMouseEnter() {
-
+    this.removeTooltip()
     this.tooltipEl = this.renderer.createElement('span')
     this.renderer.setProperty(this.tooltipEl, 'innerText', this.toolTipText);
     this.renderer.addClass(this.tooltipEl, 'tooltip-inner');
@@ -46,6 +46,13 @@ export class TooltipDirective {
     if (this.tooltipEl) {
       this.renderer.setStyle(this.tooltipEl, 'opacity', '0');
       this.renderer.setStyle(this.tooltipEl, 'pointer-events', 'none');
+    }
+  }
+
+  private removeTooltip() {
+    if (this.tooltipEl) {
+      this.renderer.removeChild(this.el.nativeElement, this.tooltipEl);
+      this.tooltipEl = null;
     }
   }
 }

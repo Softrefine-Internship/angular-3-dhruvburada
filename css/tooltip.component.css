@@ -43,13 +43,6 @@
   padding: 0.2rem;
 }
 
-[appToolTip] {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  justify-content: center;
-}
-
 .tool-tip {
   margin-top: 3rem;
 }
@@ -69,36 +62,43 @@
   opacity: 0;
   transition: opacity 0.2s ease, transform 0.2s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  transform: translate(-50%, -8px);
 }
 
 /* Show tooltip when parent is hovered */
 .tooltip-parent:hover .tooltip-inner {
   opacity: 1;
   pointer-events: auto;
-  transform: translate(-50%, -12px);
 }
 
 .top {
-  bottom: 100%;
+  bottom: calc(100% + 8px);
   left: 50%;
-  transform: translateX(-50%) translateY(-8px);
+  transform: translateX(-50%);
 }
 
 .bottom {
-  top: 187%;
+  top: calc(100% + 8px);
   left: 50%;
-  transform: translateX(-50%) translateY(8px);
+  transform: translateX(-50%);
 }
 
 .left {
-  right: 100%;
+  right: calc(100% + 8px);
   top: 50%;
-  transform: translateX(-8px) translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .right {
-  left: 134%;
+  left: calc(100% + 8px);
   top: 50%;
-  transform: translateX(8px) translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.tool-tip-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: fit-content;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
