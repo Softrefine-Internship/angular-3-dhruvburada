@@ -9,6 +9,7 @@ export class TooltipDirective {
   @Input() position: string = 'top';
   @Input() backColor: string = 'black';
   @Input() color: string = 'white';
+  @Input() size: string = '16px';
 
   constructor(private el: ElementRef, private renderer: Renderer2) {
     this.renderer.addClass(this.el.nativeElement, 'tooltip-parent');
@@ -23,6 +24,7 @@ export class TooltipDirective {
     this.renderer.addClass(this.tooltipEl, this.position);
     this.renderer.setStyle(this.tooltipEl, 'background-color', this.backColor);
     this.renderer.setStyle(this.tooltipEl, 'color', this.color)
+    this.renderer.setStyle(this.tooltipEl, 'font-size', this.size)
     this.renderer.appendChild(this.el.nativeElement, this.tooltipEl);
     this.showTooltip()
 

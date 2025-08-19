@@ -13,4 +13,5 @@ export class TooltipComponent {
   position: string = "top";
   color: string = "white";
   backColor: string = "black";
+  size: string = `16px`
 }

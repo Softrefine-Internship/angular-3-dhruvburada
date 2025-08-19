@@ -23,6 +23,15 @@
         <option value="right">Right</option>
       </select>
     </div>
+    <div class="form-group">
+      <label for="size">Font Size</label>
+      <select name="size" id="size" [(ngModel)]="size">
+        <option value="16px">16px</option>
+        <option value="17px">17px</option>
+        <option value="18px">18px</option>
+        <option value="19px">19px</option>
+      </select>
+    </div>
   </form>
 </div>
 
@@ -45,6 +54,7 @@
     [position]="position"
     [color]="color"
     [backColor]="backColor"
+    [size]="size"
   >
     This is custom tool-tip directive.
   </p>
