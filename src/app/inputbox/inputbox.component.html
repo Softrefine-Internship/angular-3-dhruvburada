@@ -1,1 +1,11 @@
-<p>inputbox works!</p>
+<form>
+  <label for="name">Name</label>
+  <input
+    type="text"
+    name="name"
+    id="name"
+    placeholder="Please Enter Your Name"
+    #nameInput
+    (blur)="trimText(nameInput)"
+  />
+</form>

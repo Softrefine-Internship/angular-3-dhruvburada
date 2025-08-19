@@ -5,49 +5,42 @@
   border-radius: 8px;
   background-color: #f9f9f9;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-
-  h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-    color: #333;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-
-      label {
-        margin-bottom: 0.5rem;
-        font-weight: 600;
-        color: #555;
-      }
-
-      input[type="color"],
-      select {
-        padding: 0.5rem;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        font-size: 1rem;
-        cursor: pointer;
-      }
-
-      select {
-        background-color: white;
-      }
-
-      input[type="color"] {
-        height: 2.5rem;
-        width: 100%;
-        padding: 0.2rem;
-      }
-    }
-  }
+}
+.tooltip-customizer h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+.tooltip-customizer form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.tooltip-customizer form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+.tooltip-customizer form .form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #555;
+}
+.tooltip-customizer form .form-group input[type=color],
+.tooltip-customizer form .form-group select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.tooltip-customizer form .form-group select {
+  background-color: white;
+}
+.tooltip-customizer form .form-group input[type=color] {
+  height: 2.5rem;
+  width: 100%;
+  padding: 0.2rem;
 }
 
 [appToolTip] {
@@ -76,10 +69,7 @@
   opacity: 0;
   transition: opacity 0.2s ease, transform 0.2s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-
   /* Default position - can be overridden */
-  //   top: -100%;
-  //   left: 50%;
   transform: translate(-50%, -8px);
 }
 
@@ -89,6 +79,7 @@
   pointer-events: auto;
   transform: translate(-50%, -12px);
 }
+
 .top {
   bottom: 100%;
   left: 50%;

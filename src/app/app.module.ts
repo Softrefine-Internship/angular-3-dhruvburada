@@ -2,15 +2,20 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { HighlightDirective } from './highlight.directive';
+import { InputboxComponent } from './inputbox/inputbox.component';
+import { TooltipDirective } from './tooltip/tooltip.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    HighlightDirective,
+    TooltipDirective,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppComponent
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: []
 })
 export class AppModule { }
