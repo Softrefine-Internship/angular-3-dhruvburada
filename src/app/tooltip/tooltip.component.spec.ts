@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TooltipComponent } from './tooltip.component';
+import { TooltipDirective } from './tooltip.directive';
 
 describe('TooltipComponent', () => {
   let component: TooltipComponent;
@@ -10,7 +11,7 @@ describe('TooltipComponent', () => {
     await TestBed.configureTestingModule({
       imports: [TooltipComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(TooltipComponent);
     component = fixture.componentInstance;

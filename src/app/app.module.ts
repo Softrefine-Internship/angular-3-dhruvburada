@@ -10,6 +10,7 @@ import { TooltipDirective } from './tooltip/tooltip.directive';
   declarations: [
     HighlightDirective,
     TooltipDirective,
+
   ],
   imports: [
     BrowserModule,

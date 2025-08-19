@@ -76,10 +76,6 @@
   opacity: 0;
   transition: opacity 0.2s ease, transform 0.2s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-
-  /* Default position - can be overridden */
-  //   top: -100%;
-  //   left: 50%;
   transform: translate(-50%, -8px);
 }
 
